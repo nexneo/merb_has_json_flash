@@ -1,9 +1,9 @@
 require File.dirname(__FILE__) + '/../spec_helper'
-require 'merb_has_flash/flash_hash'
+require 'merb_has_json_flash/flash_hash'
 
-describe "merb_has_flash FlashHash" do
+describe "merb_has_json_flash FlashHash" do
   before(:each) do
-    @hash = MerbHasFlash::FlashHash.new
+    @hash = MerbHasJsonFlash::FlashHash.new
   end
 
   it "should not be a kind of Hash" do

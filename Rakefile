@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'rake/gempackagetask'
  
-spec = eval(File.read('merb_has_flash.gemspec'))
+spec = eval(File.read('merb_has_json_flash.gemspec'))
 Rake::GemPackageTask.new(spec) { |pkg| pkg.gem_spec = spec }
 
 # Checks to see if Windows platform or if "SUDOLESS" environment variable is set

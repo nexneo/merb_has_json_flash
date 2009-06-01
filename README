@@ -1,4 +1,4 @@
-merb_has_flash
+merb_has_json_flash
 =================
 
 A plugin for the Merb framework that provides Rails-style flash.

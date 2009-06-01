@@ -1,18 +1,18 @@
 unless defined?(Merb::Plugins)
-  raise %q{merb_has_flash says, "Something's not right, bub.  You should run me inside Merb, or at least cheat and define a Merb::Plugins constant."}
+  raise %q{merb_has_json_flash says, "Something's not right, bub.  You should run me inside Merb, or at least cheat and define a Merb::Plugins constant."}
 end
 
-require 'merb_has_flash/flash_hash'
+require 'merb_has_json_flash/flash_hash'
 
-require 'merb_has_flash/helper'
-Merb::RenderMixin.send :include, MerbHasFlash::FlashHelperMixin
+require 'merb_has_json_flash/helper'
+Merb::RenderMixin.send :include, MerbHasJsonFlash::FlashHelperMixin
 
-require 'merb_has_flash/controller_extension'
-Merb::Controller.send :include, MerbHasFlash::ControllerExtension
+require 'merb_has_json_flash/controller_extension'
+Merb::Controller.send :include, MerbHasJsonFlash::ControllerExtension
 
 
 
-module MerbHasFlash
+module MerbHasJsonFlash
   # The flash provides a way to pass temporary objects between actions. Anything you place in the flash will be exposed
   # to the very next action and then cleared out. This is a great way of doing notices and alerts, such as a create action
   # that sets <tt>flash[:notice] = "Successfully created"</tt> before redirecting to a display action that can then expose

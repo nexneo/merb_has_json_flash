@@ -1,4 +1,4 @@
-module MerbHasFlash
+module MerbHasJsonFlash
   class FlashNow #:nodoc:
     def initialize(flash)
       @flash = flash
@@ -16,9 +16,13 @@ module MerbHasFlash
   end
 
   class FlashHash
-    def initialize(*args) #:nodoc:
-      @attrs = Hash.new(*args)
+    def initialize(attrs = {}) #:nodoc:
+      @attrs = attrs
       @keepers = []
+    end
+
+    def attrs
+      @attrs
     end
 
     def []=(key, val) #:nodoc:
