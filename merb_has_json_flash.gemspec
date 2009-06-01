@@ -19,5 +19,4 @@ Gem::Specification.new do |s|
     "spec/merb_has_json_flash/flash_hash_spec.rb",
     "spec/spec_helper.rb"]
   s.add_dependency("merb-core", ["> 0.9.0"])
-  s.add_dependency("json", ["> 1.1.3"])
 end

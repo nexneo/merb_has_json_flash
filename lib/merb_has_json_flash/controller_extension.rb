@@ -14,7 +14,14 @@ module MerbHasJsonFlash
 
     protected
       def restore_flash
-        @_flash = FlashHash.new(JSON.parse(cookies[:flash])) if cookies[:flash]
+        if cookies[:flash]
+          if defined? ActiveSupport
+            attrs = ActiveSupport::JSON.decode cookies[:flash]
+          else
+            attrs = JSON.parse cookies[:flash]
+          end
+          @_flash = FlashHash.new attrs
+        end
       end
 
       def sweep_flash
