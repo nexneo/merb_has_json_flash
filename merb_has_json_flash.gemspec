@@ -1,7 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "merb_has_json_flash"
   s.version = "1.1"
-  s.date = "2009-6-31"
   s.summary = "Rails' 'flash' session notification system ported to Merb, serialized as JSON"
   s.email = "ben@benlog.org"
   s.homepage = "http://github.com/bentlegen/merb_has_json_flash"
